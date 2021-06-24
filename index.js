@@ -7,7 +7,13 @@
 // oddishOrEvenish(41) should return "Oddish", since 4 + 1 = 5. 
 
 function oddishOrEvenish(num) {
-	
+    let sum = 0
+	num = num.toString().split('')
+    num.forEach(int => {
+        int = parseInt(int)
+        sum = sum + int
+    })
+    return sum%2 === 0 ? 'Evenish' : 'Oddish'
 } 
 
 console.log(oddishOrEvenish(43), "Oddish");
